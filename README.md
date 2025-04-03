@@ -1,18 +1,24 @@
 # Project_Template
 
 ## Team Name: 
-(Enter your team name from Canvas)
+Posit Team
 
 ## Team Members:
-- Student 1
-- Student 2
-- Student 3
+- Melika Morsali (qfc2zn)
+- Hasantha Ekanayake (uyq6nu)
 
 ## Project Title:
-(Enter your project title - be creative)
+(Posit - Index-based computation of real-number multiplication)
 
 ## Project Description:
-(Provide a short description of the problem you're addressing)
+(We propose to develop a custom intellectual property (IP) core for performing Multiply-
+Accumulate (MAC) operations where the activation inputs are in 16-bit IEEE floating-
+point format (FP16), and the weights are in 4-bit posit (Posit4) format. This IP will be
+developed on the PYNQ-Z1 FPGA board, either using Verilog RTL or High-Level Synthesis
+(HLS). The goal is to combine the advantages of industry-standard FP16 activations with
+the low-precision posit representation for weights, thereby reducing resource usage while
+maintaining reasonable accuracy for real-number MAC operations. This IP aims to support
+computational tasks common in machine learning and high-performance computing)
 
 ## Key Objectives:
 - Objective 1
@@ -20,13 +26,16 @@
 - Objective 3
 
 ## Technology Stack:
-(List the hardware platform, software tools, language(s), etc. you plan to use)
+(PYNQ-Z1 FPGA board, Vivado, Verilog)
 
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
 
 ## Tasks:
 (Describe the tasks that need to be completed. Assign students to tasks)
-
+- FP-Posit Multiplication Module ()
+- FP-Posit Accumulator ()
+- FP-Posit MAC ()
+- 
 ## Timeline:
 (Provide a timeline or milestones for the project)
