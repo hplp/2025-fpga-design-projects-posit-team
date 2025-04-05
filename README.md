@@ -40,7 +40,9 @@ computational tasks common in machine learning and high-performance computing.
 - Verilog RTL and/or High-Level Synthesis (HLS)
 
 ## Expected Outcomes:
-(Describe what you expect to deliver at the end of the project)
+1.	A functional custom MAC IP core that uses FP16-Posit4 computation, synthesized and deployed on the PYNQ-Z1 FPGA board.
+2.	Improved memory and power efficiency over traditional FP16-only MAC units, due to the use of compact 4-bit Posit weights.
+3.	Verified simulation and hardware testing results showing correctness, resource utilization, and accuracy trade-offs—potentially suitable for edge AI and low-power applications.
 
 ## Tasks:
 
