@@ -47,11 +47,13 @@ computational tasks common in machine learning and high-performance computing.
 ## Timeline:
 
 - Phase-I: Starting the Project
+  
 GitHub Repository Setup: Create a repo for the project, provide a clear README,
 and outline roles for each teammate.
 
 
-Initial Module Placeholders: Prepare skeletal Verilog/HLS code for the FP16-
+Initial Module Placeholders:
+Prepare skeletal Verilog/HLS code for the FP16-
 Posit4 multiplier and accumulator.
 
 Resource Listing: Identify required hardware (PYNQ-Z1) and software tools (Vi-
