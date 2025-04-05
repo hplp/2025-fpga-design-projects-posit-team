@@ -52,8 +52,8 @@ computational tasks common in machine learning and high-performance computing.
 -  FP-Int Multiplication Module as baseline (Hasantha)
 - FP-Int Accumulator as baseline (Hasantha)
 - FP-Int as baseline MAC (Hasantha)
-- Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC (Meliak and Hasantha)
-- Benchmarking and Compareing (Meliak and Hasantha)
+- Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC (Melika and Hasantha)
+- Benchmarking and Comparing (Melika and Hasantha)
   
 ## Timeline:
 
