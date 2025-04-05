@@ -33,9 +33,12 @@ computational tasks common in machine learning and high-performance computing)
 
 ## Tasks:
 (Describe the tasks that need to be completed. Assign students to tasks)
-- FP-Posit Multiplication Module ()
-- FP-Posit Accumulator ()
-- FP-Posit MAC ()
+- FP-Posit Multiplication Module (Melika)
+- FP-Posit Accumulator (Melika)
+- FP-Posit MAC (Melika)
+- - FP-Int Multiplication Module as baseline (Hasantha)
+- FP-Int Accumulator as baseline (Hasantha)
+- FP-Int as baseline MAC (Hasantha)
 - 
 ## Timeline:
 (Provide a timeline or milestones for the project)
