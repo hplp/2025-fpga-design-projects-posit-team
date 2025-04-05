@@ -8,7 +8,7 @@ Posit Team
 - Hasantha Ekanayake (uyq6nu)
 
 ## Project Title:
-(Posit - Index-based computation of real-number multiplication)
+Posit - Index-based computation of real-number multiplication
 
 ## Project Description:
 We propose to develop a custom intellectual property (IP) core for performing Multiply-
@@ -34,7 +34,7 @@ computational tasks common in machine learning and high-performance computing.
 (Describe what you expect to deliver at the end of the project)
 
 ## Tasks:
-(Describe the tasks that need to be completed. Assign students to tasks)
+
 - FP-Posit Multiplication Module (Melika)
 - FP-Posit Accumulator (Melika)
 - FP-Posit MAC (Melika)
@@ -42,27 +42,37 @@ computational tasks common in machine learning and high-performance computing.
 - FP-Int Accumulator as baseline (Hasantha)
 - FP-Int as baseline MAC (Hasantha)
 - Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC (Meliak and Hasantha)
-- Benchmark and Compareing (Meliak and Hasantha)
+- Benchmarking and Compareing (Meliak and Hasantha)
   
 ## Timeline:
+
 - Phase-I: Starting the Project
--- • GitHub Repository Setup: Create a repo for the project, provide a clear README,
+GitHub Repository Setup: Create a repo for the project, provide a clear README,
 and outline roles for each teammate.
--- • Initial Module Placeholders: Prepare skeletal Verilog/HLS code for the FP16-
+
+
+Initial Module Placeholders: Prepare skeletal Verilog/HLS code for the FP16-
 Posit4 multiplier and accumulator.
--- • Resource Listing: Identify required hardware (PYNQ-Z1) and software tools (Vi-
+
+Resource Listing: Identify required hardware (PYNQ-Z1) and software tools (Vi-
 vado, HLS, simulators).
 - Phase-II: First Iteration and Progress Report
--- • Module Implementation & Test: Complete and simulate FP16-Posit4 multiplier/
+
+Module Implementation & Test: Complete and simulate FP16-Posit4 multiplier/
 accumulator modules, verifying correctness with testbenches.
--- • Preliminary MAC Integration: Combine the multiplier and accumulator into a
+
+Preliminary MAC Integration: Combine the multiplier and accumulator into a
 MAC pipeline; check resource usage and timing in simulations.
--- • Documentation: Update the GitHub repo with progress logs, issue tracking, and
+
+Documentation: Update the GitHub repo with progress logs, issue tracking, and
 test results.
 - Phase-III: Finalization & Presentation
--- • Custom IP Generation: Wrap the MAC design as a Zynq-compatible IP with AXI
+
+Custom IP Generation: Wrap the MAC design as a Zynq-compatible IP with AXI
 interfaces; synthesize and implement on the PYNQ board.
--- • Benchmark & Compare: Evaluate LUT/FF/DSP usage, power, and accuracy
+
+Benchmark & Compare: Evaluate LUT/FF/DSP usage, power, and accuracy
 against a baseline FP16 design.
--- • Demo & Report: Present the final functioning IP core with a concise demo and
+
+Demo & Report: Present the final functioning IP core with a concise demo and
 submit the complete GitHub repo and documentation.
