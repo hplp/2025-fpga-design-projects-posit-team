@@ -33,6 +33,7 @@ computational tasks common in machine learning and high-performance computing.
 	•	Integrate the MAC unit as a custom IP with AXI interfaces for real-world deployment.
 
 - Objective 3 - 	Benchmark and Compare Performance:
+  
 	•	Evaluate the custom MAC unit against a baseline FP16-only MAC in terms of:
 		Resource usage (LUTs, DSPs, FFs),Power efficiency,Numerical accuracy.
   
