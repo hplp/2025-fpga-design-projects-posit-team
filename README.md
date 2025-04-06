@@ -24,18 +24,18 @@ computational tasks common in machine learning and high-performance computing.
 - Objective 1 - Design a Custom MAC Unit Using Mixed Precision:
   
 	•	Develop a Multiply-Accumulate (MAC) IP core that accepts 16-bit IEEE floating-point (FP16) activations and 4-bit posit (Posit4) weights.
+
 	•	This mixed-precision design aims to combine FP16’s compatibility with the memory efficiency of Posit4.
 
 - Objective 2 - Implement and Integrate on FPGA:
 	•	Build the design using Verilog or HLS and implement it on a PYNQ-Z1 FPGA.
+
 	•	Integrate the MAC unit as a custom IP with AXI interfaces for real-world deployment.
 
 - Objective 3 - 	Benchmark and Compare Performance:
 	•	Evaluate the custom MAC unit against a baseline FP16-only MAC in terms of:
-	•	Resource usage (LUTs, DSPs, FFs),
-	•	Power efficiency,
-	•	Numerical accuracy.
-
+		Resource usage (LUTs, DSPs, FFs),Power efficiency,Numerical accuracy.
+  
 
 ## Technology Stack:
 - PYNQ-Z1 FPGA board
