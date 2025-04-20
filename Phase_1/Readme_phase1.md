@@ -15,6 +15,8 @@
 ## Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC 
 
 FP-Posit MAC
+
+
 FP-Int MAC
 
-![My nice diagram](images/fp_int_mac.png) 
+![My nice diagram](Images/fp_int_mac.png) 
