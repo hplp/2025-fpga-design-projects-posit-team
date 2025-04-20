@@ -24,3 +24,8 @@ FP-Int MAC
   <img src="Images/fp_int_mac.png" alt="fp_int" width="50%">
 </p>
 
+| LUT | FF |
+| -------- | -------- |
+| 658 | 792 |
+
+
