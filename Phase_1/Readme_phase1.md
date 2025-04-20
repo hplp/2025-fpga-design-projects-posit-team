@@ -1,15 +1,15 @@
 # FPGA Project - Phase 1
 
-- FP-Posit Multiplication Module (Melika)
-- FP-Posit Accumulator (Melika)
-- FP-Posit MAC (Melika)
+- FP-Posit Multiplication Module 
+- FP-Posit Accumulator 
+- FP-Posit MAC 
   
-- FP-Int Multiplication Module as baseline (Hasantha)
-- FP-Int Accumulator as baseline (Hasantha)
-- FP-Int as baseline MAC (Hasantha)
+- FP-Int Multiplication Module as baseline 
+- FP-Int Accumulator as baseline 
+- FP-Int as baseline MAC 
 
   
-- Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC (Melika and Hasantha)
+- Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC 
 
 FP-Int MAC
 
