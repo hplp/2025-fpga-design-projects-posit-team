@@ -1,4 +1,4 @@
-# Project_Template
+# FPGA Project
 
 ## Team Name: 
 Posit Team
