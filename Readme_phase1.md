@@ -17,7 +17,7 @@
 FP-Posit MAC
 
 
-FP-Int MAC
+### FP-Int MAC
 
 Netlist Diagram
 <!-- scale to 50% of container width -->
