@@ -1,12 +1,12 @@
 # FPGA Project - Phase 1
 
-## Implementation and Verification 
+## Implementation and Verification -  FP-Posit MAC
 
 - FP-Posit Multiplication Module 
 - FP-Posit Accumulator 
 - FP-Posit MAC 
 
-## Implementation and Verification 
+## Implementation and Verification - FP-Int MAC
 - FP-Int Multiplication Module as baseline
 
 
