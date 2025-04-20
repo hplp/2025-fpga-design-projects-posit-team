@@ -7,17 +7,19 @@
 - FP-Posit MAC 
 
 ## Implementation and Verification 
-- FP-Int Multiplication Module as baseline 
+- FP-Int Multiplication Module as baseline
+
+
 - FP-Int Accumulator as baseline 
 - FP-Int as baseline MAC 
 
   
 ## Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC 
 
-FP-Posit MAC
+#### FP-Posit MAC
 
 
-### FP-Int MAC
+#### FP-Int MAC
 
 Netlist Diagram
 <!-- scale to 50% of container width -->
