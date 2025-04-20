@@ -17,3 +17,4 @@
 FP-Posit MAC
 FP-Int MAC
 
+![My nice diagram](images/fp_int_mac.png) 
