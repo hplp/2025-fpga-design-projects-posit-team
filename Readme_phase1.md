@@ -19,10 +19,13 @@ FP-Posit MAC
 
 FP-Int MAC
 
+Netlist Diagram
 <!-- scale to 50% of container width -->
 <p align="center">
   <img src="Images/fp_int_mac.png" alt="fp_int" width="50%">
 </p>
+
+Resource Utilization
 
 | LUT | FF |
 | -------- | -------- |
