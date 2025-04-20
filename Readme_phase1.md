@@ -19,5 +19,8 @@ FP-Posit MAC
 
 FP-Int MAC
 
-![My nice diagram](../Images/fp_int_mac.png) 
+<!-- scale to 50% of container width -->
+<p align="center">
+  <img src="Images/fp_int_mac.png" alt="fp_int" width="50%">
+</p>
 
