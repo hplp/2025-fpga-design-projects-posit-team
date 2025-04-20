@@ -19,4 +19,4 @@ FP-Posit MAC
 
 FP-Int MAC
 
-![My nice diagram](Images/fp_int_mac.png) 
+![My nice diagram](../Images/fp_int_mac.png) 
