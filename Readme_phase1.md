@@ -46,6 +46,7 @@
 
 #### - FP-Posit MAC
 Netlist Diagram
+![image](https://github.com/user-attachments/assets/f66cd21f-7a9e-408a-a8ff-c40abb060eed)
 
 Resource Utilization
 
