@@ -48,7 +48,7 @@
 Netlist Diagram
 
 <p align="center">
-  <img src="Images/"" alt="fp_int" width="50%">
+  <img src="Images/FP-Posit-Mac-device.png"" alt="fp_int" width="50%">
 </p>
 
 Resource Utilization
