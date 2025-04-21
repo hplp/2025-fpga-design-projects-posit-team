@@ -51,7 +51,7 @@ Resource Utilization
 
 | LUT | FF |
 | -------- | -------- |
-|  |  |
+| 460 | 695 |
 #### - FP-Int MAC
 
 Netlist Diagram
@@ -66,6 +66,7 @@ Resource Utilization
 | -------- | -------- |
 | 658 | 792 |
 
+As it is shown above and expected, FP-Posite Mac utilizes less hardware than FP-Int.
 
 ## Chalneges
 We are currently facing challenges testing our IP using Vitis with C code. Since the Posit input is sent serially with each clock cycle, we've realized that we need to create a custom IP with AXI Stream instead of AXI Lite. However, the issue is that AXI Stream has only four registers, while our code requires eight registers. We are now working on modifying the code to send the Posit input in parallel or exploring how to use AXI Stream with this code.
