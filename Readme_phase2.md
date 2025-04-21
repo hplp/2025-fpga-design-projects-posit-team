@@ -24,20 +24,20 @@
 - FP-Int Multiplication Module as baseline Testbench Result:
 
 <p align="center">
-  <img src="Images/fp_int_mul 1.PNG" alt="fp_int_mul" width="80%">
+  <img src="Images/fp_int_mul.png" alt="fp_int_mul" width="80%">
 </p>
 
 
 - FP-Int Accumulator as baseline Testbench Result: 
 
 <p align="center">
-  <img src="Images/fp_int_acc 1.PNG" alt="fp_int_acc" width="80%">
+  <img src="Images/fp_int_acc.png" alt="fp_int_acc" width="80%">
 </p>
 
 - FP-Int as baseline MAC Testbench Result:
 
 <p align="center">
-  <img src="Images/fp_int_mac 1.PNG" alt="fp_int_mac" width="80%">
+  <img src="Images/fp_int_mac.png" alt="fp_int_mac" width="80%">
 </p>
 
 
