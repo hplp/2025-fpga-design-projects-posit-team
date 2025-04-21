@@ -4,21 +4,21 @@
 
 - FP-Posit Multiplication Module
   <p align="center">
-  <img src="Images/posit_mul.png" alt="fp_posit_mul" width="80%">
+  <img src="Images/posit_mul.png" alt="fp_posit_mul" width="100%">
 </p>
 
 
 - FP-Posit Accumulator
 
   <p align="center">
-  <img src="Images/posit_acc.png" alt="fp_posit_acc" width="80%">
+  <img src="Images/posit_acc.png" alt="fp_posit_acc" width="100%">
 </p>
 
 
 - FP-Posit MAC
 
     <p align="center">
-  <img src="Images/posit_mac.png" alt="fp_posit_mac" width="80%">
+  <img src="Images/posit_mac.png" alt="fp_posit_mac" width="100%">
 </p>
 
 ## Implementation and Verification - FP-Int MAC
