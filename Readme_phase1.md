@@ -24,9 +24,23 @@
 ## Implementation and Verification - FP-Int MAC
 - FP-Int Multiplication Module as baseline
 
+<p align="center">
+  <img src="Images/fp_int_mul.png" alt="fp_int" width="50%">
+</p>
 
-- FP-Int Accumulator as baseline 
-- FP-Int as baseline MAC 
+
+- FP-Int Accumulator as baseline
+
+<p align="center">
+  <img src="Images/fp_int_acc.png" alt="fp_int" width="50%">
+</p>
+
+- FP-Int as baseline MAC
+
+<p align="center">
+  <img src="Images/fp_int_mac.png" alt="fp_int" width="50%">
+</p>
+
 
   
 ## Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC 
@@ -39,7 +53,7 @@
 Netlist Diagram
 <!-- scale to 50% of container width -->
 <p align="center">
-  <img src="Images/fp_int_mac.png" alt="fp_int" width="50%">
+  <img src="Images/fp_int_mac_circuit.png" alt="fp_int" width="50%">
 </p>
 
 Resource Utilization
