@@ -48,7 +48,7 @@
 Netlist Diagram
 
 <p align="center">
-  <img src="[Images/fp_int_mac_circuit.png](https://github.com/user-attachments/assets/f66cd21f-7a9e-408a-a8ff-c40abb060eed)" alt="fp_int" width="50%">
+  <img src="Images/"" alt="fp_int" width="50%">
 </p>
 
 Resource Utilization
