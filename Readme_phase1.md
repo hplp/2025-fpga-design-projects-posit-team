@@ -25,20 +25,20 @@
 - FP-Int Multiplication Module as baseline
 
 <p align="center">
-  <img src="Images/fp_int_mul.PNG" alt="fp_int_mul" width="50%">
+  <img src="Images/fp_int_mul 1.PNG" alt="fp_int_mul" width="50%">
 </p>
 
 
 - FP-Int Accumulator as baseline
 
 <p align="center">
-  <img src="Images/fp_int_acc.PNG" alt="fp_int_acc" width="50%">
+  <img src="Images/fp_int_acc 1.PNG" alt="fp_int_acc" width="50%">
 </p>
 
 - FP-Int as baseline MAC
 
 <p align="center">
-  <img src="Images/fp_int_mac.PNG" alt="fp_int_mac" width="50%">
+  <img src="Images/fp_int_mac 1.PNG" alt="fp_int_mac" width="50%">
 </p>
 
 
