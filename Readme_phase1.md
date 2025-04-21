@@ -2,9 +2,24 @@
 
 ## Implementation and Verification -  FP-Posit MAC
 
-- FP-Posit Multiplication Module 
-- FP-Posit Accumulator 
-- FP-Posit MAC 
+- FP-Posit Multiplication Module
+  <p align="center">
+  <img src="Images/posit_mul.png" alt="fp_int" width="80%">
+</p>
+
+
+- FP-Posit Accumulator
+
+  <p align="center">
+  <img src="Images/posit_acc.png" alt="fp_int" width="80%">
+</p>
+
+
+- FP-Posit MAC
+
+    <p align="center">
+  <img src="Images/posit_mac.png" alt="fp_int" width="80%">
+</p>
 
 ## Implementation and Verification - FP-Int MAC
 - FP-Int Multiplication Module as baseline
