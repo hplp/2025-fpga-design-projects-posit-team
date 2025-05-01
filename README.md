@@ -1,4 +1,4 @@
-# FPGA Project
+# Posit - Index-based computation of real-number multiplication
 
 ## Team Name: 
 Posit Team
@@ -7,11 +7,14 @@ Posit Team
 - Melika Morsali (qfc2zn)
 - Hasantha Ekanayake (uyq6nu)
 
-## Project Title:
-Posit - Index-based computation of real-number multiplication
+## 1. Project Overveiw:
+
+
+#### Project Title: Posit - Index-based computation of real-number multiplication
+#### Repository URL: [GitHub Repository Link](https://github.com/hplp/2025-fpga-design-projects-posit-team)
 
 ## Project Description:
-We propose to develop a custom intellectual property (IP) core for performing Multiply-
+This project is to develop a custom intellectual property (IP) core for performing Multiply-
 Accumulate (MAC) operations where the activation inputs are in 16-bit IEEE floating-
 point format (FP16), and the weights are in 4-bit posit (Posit4) format. This IP will be
 developed on the PYNQ-Z1 FPGA board, either using Verilog RTL or High-Level Synthesis
@@ -20,7 +23,7 @@ the low-precision posit representation for weights, thereby reducing resource us
 maintaining reasonable accuracy for real-number MAC operations. This IP aims to support
 computational tasks common in machine learning and high-performance computing.
 
-## Key Objectives:
+## 2. Objectives:
 - ### Objective 1 - Design a Custom MAC Unit Using Mixed Precision:
   
 	•	Develop a Multiply-Accumulate (MAC) IP core that accepts 16-bit IEEE floating-point (FP16) activations and 4-bit posit (Posit4) weights.
@@ -38,58 +41,27 @@ computational tasks common in machine learning and high-performance computing.
 		Resource usage (LUTs, DSPs, FFs),Power efficiency,Numerical accuracy.
   
 
-## Technology Stack:
+## 3. Technology Stack:
 - PYNQ-Z1 FPGA board
 - Vivado and Vitis toolchains
 - Verilog RTL and/or High-Level Synthesis (HLS)
 
-## Expected Outcomes:
+## 4. Expected Outcomes:
 1.	A functional custom MAC IP core that uses FP16-Posit4 computation, synthesized and deployed on the PYNQ-Z1 FPGA board.
 2.	Improved memory and power efficiency over traditional FP16-only MAC units, due to the use of compact 4-bit Posit weights.
 3.	Verified simulation and hardware testing results showing correctness, resource utilization, and accuracy trade-offs—potentially suitable for edge AI and low-power applications.
 
-## Tasks:
+## 5. Tasks:
 
-- FP-Posit Multiplication Module (Melika)
-- FP-Posit Accumulator (Melika)
-- FP-Posit MAC (Melika)
--  FP-Int Multiplication Module as baseline (Hasantha)
-- FP-Int Accumulator as baseline (Hasantha)
-- FP-Int as baseline MAC (Hasantha)
-- Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC (Melika and Hasantha)
-- Benchmarking and Comparing (Melika and Hasantha)
+- FP-Posit Multiplication Module 
+- FP-Posit Accumulator
+- FP-Posit MAC 
+-  FP-Int Multiplication Module as baseline
+- FP-Int Accumulator as baseline 
+- FP-Int as baseline MAC 
+- Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC 
+- Benchmarking and Comparing 
   
-## Timeline:
-
-- Phase-I: Starting the Project
-  
-GitHub Repository Setup: Create a repo for the project, provide a clear README,
-and outline roles for each teammate.
+## 6. Results:
 
 
-Initial Module Placeholders:
-Prepare skeletal Verilog/HLS code for the FP16-
-Posit4 multiplier and accumulator.
-
-Resource Listing: Identify required hardware (PYNQ-Z1) and software tools (Vi-
-vado, HLS, simulators).
-- Phase-II: First Iteration and Progress Report
-
-Module Implementation & Test: Complete and simulate FP16-Posit4 multiplier/
-accumulator modules, verifying correctness with testbenches.
-
-Preliminary MAC Integration: Combine the multiplier and accumulator into a
-MAC pipeline; check resource usage and timing in simulations.
-
-Documentation: Update the GitHub repo with progress logs, issue tracking, and
-test results.
-- Phase-III: Finalization & Presentation
-
-Custom IP Generation: Wrap the MAC design as a Zynq-compatible IP with AXI
-interfaces; synthesize and implement on the PYNQ board.
-
-Benchmark & Compare: Evaluate LUT/FF/DSP usage, power, and accuracy
-against a baseline FP16 design.
-
-Demo & Report: Present the final functioning IP core with a concise demo and
-submit the complete GitHub repo and documentation.
