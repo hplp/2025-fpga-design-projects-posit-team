@@ -78,7 +78,7 @@ A generic **posit number** consists of the following fields:
 - **Exponent (optional)**: `es` bits, unsigned, no bias.
 - **Fraction (optional)**: Remaining bits, with a hidden leading 1 (no denormals).
 
-<![image](https://github.com/user-attachments/assets/83fb3d47-7e0c-4947-a48e-cccfb5d2f540)
+![image](https://github.com/user-attachments/assets/83fb3d47-7e0c-4947-a48e-cccfb5d2f540)
 
 > *Figure: Generic posit format layout showing dynamic regime, optional exponent (es bits), and fraction fields.*
 
