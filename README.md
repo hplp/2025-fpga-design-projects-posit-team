@@ -69,11 +69,52 @@ Posit is a **type-3 universal number (unum)** format introduced as a potential r
 - **Encoding components**: sign bit, variable-length *regime*, optional exponent, and fraction.
 - **Efficient at low bit-widths**, making it ideal for deep learning inference at the edge.
 
-![image](https://github.com/user-attachments/assets/83fb3d47-7e0c-4947-a48e-cccfb5d2f540)
+### Posit Encoding Details
+
+A generic **posit number** consists of the following fields:
+
+- **Sign (1 bit)**: `0` for positive, `1` for negative.
+- **Regime**: A run-length encoded sequence of `0`s or `1`s, terminated by a flip (`r̄`).
+- **Exponent (optional)**: `es` bits, unsigned, no bias.
+- **Fraction (optional)**: Remaining bits, with a hidden leading 1 (no denormals).
+
+<![image](https://github.com/user-attachments/assets/83fb3d47-7e0c-4947-a48e-cccfb5d2f540)
+
+> *Figure: Generic posit format layout showing dynamic regime, optional exponent (es bits), and fraction fields.*
+
+---
+
+### Regime Bit Interpretation
+
+Let `m` be the number of repeated bits in the regime field:
+- If regime starts with `0`, value k = **–m**
+- If regime starts with `1`, value k = **m – 1**
+
+The regime contributes a scale of `useed^k`, where `useed = 2^(2^es)` and `k` is the regime value.
+
+![image](https://github.com/user-attachments/assets/3f82aa2e-a3d5-42e6-9d99-321327d0934b)
+
+
+> *Figure: Examples of how regime bits map to positive and negative powers of useed.*
+
+Overall, an n-bit posit number (p) can represent the following numbers.
+![image](https://github.com/user-attachments/assets/17e83c3d-62a1-4045-a0cf-a0e2eeaa260b)
+
+
+---
+
+### Example
+
+With `es = 3`, the following posit (n=16 bits):
+![image](https://github.com/user-attachments/assets/52e275ef-aa8a-405d-9ec6-d4c100c1d5a0)
+
+represents ` 477/134217728 ≈ 3.55393 × 10^-6 ` with es=3.
+
 
 ---
 
 ### ⚙️ Posit(4,0) Format Breakdown:
+In our implementation, we consider es=0 all the time, and for testing, we consider 4 bits posit. Therefore, our format is posit(4,0).
 
 - Total width: 4 bits
 - **Bit 0**: Sign
@@ -82,31 +123,41 @@ Posit is a **type-3 universal number (unum)** format introduced as a potential r
 - **Fraction**: Remaining bits (if any)
 
 > Posit(4,0) supports 16 unique values with higher density near ±1.
+### Posit(4,0) Value Table
+
+| Posit(4,0) | Value   |
+|------------|---------|
+| 0000       | 0       |
+| 0001       | 0.125   |
+| 0010       | 0.25    |
+| 0011       | 0.5     |
+| 0100       | 1.0     |
+| 0101       | 1.5     |
+| 0110       | 3.0     |
+| 0111       | 6.0     |
+| 1000       | NaR     |
+| 1001       | -6.0    |
+| 1010       | -3.0    |
+| 1011       | -1.5    |
+| 1100       | -1.0    |
+| 1101       | -0.5    |
+| 1110       | -0.25   |
+| 1111       | -0.125  |
 
 
 
 ---
 
-### 📊 Comparison: Posit vs IEEE-754 (Low Bit Widths)
+### Comparison: Posit vs IEEE-754 (Low Bit Widths)
 
 Unlike IEEE-754 floats, Posit offers:
 - No subnormal or reserved bit patterns
 - Balanced value distribution
 - Better coverage around commonly used values
 
-<p align="center">
-  <img src="Images/posit_vs_ieee754.png" alt="Posit vs IEEE754" width="70%">
-</p>
 
-> *Figure: Value distribution comparison between Posit(4,0) and IEEE-754 Float(4-bit).*
 
----
 
-### ✅ Why Posit(4,0) for Neural Network Weights?
-
-- Ultra-compact (4 bits)
-- High precision near 1.0 — where most weight values lie
-- Better accuracy vs. Int4 and Float8 at similar cost
 
 For more details, refer to the original article:  
 👉 [SIGARCH: Posit - A Potential Replacement for IEEE-754](https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/)
