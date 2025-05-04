@@ -288,8 +288,8 @@ The MAC unit connects two modules in sequence:
 
 - Fully pipelined and clock-synchronous
 - Handles Zero and NaR detection
-- Parameterizable width for accumulator and activation input
-- Aligns mantissa dynamically using exponent delta
+- Parameterizable width for the accumulator and activation input
+- Aligns mantissa dynamically using the exponent delta
   
 
 
@@ -330,7 +330,7 @@ Simulation Output
 - FP-Posit MAC Testbench Result:
 
     <p align="center">
-  <img src="Images/posit_mac.png" alt="fp_posit_mac" width="80%">
+  <img src="Images/image.png" alt="fp_posit_mac" width="80%">
 </p>
 MAC Operation Example
 
