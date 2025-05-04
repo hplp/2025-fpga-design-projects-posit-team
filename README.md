@@ -266,6 +266,24 @@ Then we export this hardware and test it on board via the Vitis tool. This demo 
   <img src="Images/posit_mul.png" alt="fp_posit_mul" width="80%">
 </p>
 
+Example: FP16 × Posit(4,0) Multiplication
+
+- **Input Activation (`act`)**: `0x1234`  
+  → FP16 = **1.55078125 × 2⁻¹¹**
+
+- **Input Weight (`w`)**: `0b0101`  
+  → Posit(4,0) = **1.5**
+  
+Expected Result = 1.55078125 × 2⁻¹¹ × 1.5 ≈ 0.0011358261
+
+Simulation Output
+
+- `mantissa_out = 0x129C` → Decimal = **4.65234375**
+- `exp_out = 0x3` → Exponent = **3**
+
+**Scaled Output (Final Result)**:  
+
+4.65234375 × 2^{-12} = 0.0011358261
 
 - FP-Posit Accumulator Testbench Result:
 
