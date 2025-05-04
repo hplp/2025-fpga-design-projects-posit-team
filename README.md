@@ -164,7 +164,7 @@ For more details, refer to the original article:
 [SIGARCH: Posit - A Potential Replacement for IEEE-754](https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/)
 
 
-## 7. Implementing FP16-POSIT4 multiplication and MAC operations
+## 7. Implementation
 ### FP16-POSIT4 multiplication 
 #### Inputs
 
@@ -245,6 +245,19 @@ For more details, refer to the original article:
 - Single-issue pipeline: can be re-triggered as soon as `done` de-asserts
 
 ---
+### Creating the Custom IP and testing on board
+We created a new IP for the FP16-POSIT4 multiplication module using the AXI4 peripheral Lite version. The modification of the code inside the AXI IP block is shown in the figures below.
+> *Figure: instantiates the FP16-POSIT4 multiplication module inside the AXI Lite IP block
+> *Figure: set the output
+
+The following figure shows the block design.
+> ![image](https://github.com/user-attachments/assets/96e9b9bb-d956-4eb8-88b5-5fbc1c016d49)
+> *Figure: Block design diagram.*
+
+Then we export this hardware and test it on board via the Vitis tool. This demo is represented in the following figure and demo video. 
+
+![image](https://github.com/user-attachments/assets/87feb3ec-3bcb-44e8-90f1-8c952768b270)
+
 ### FP16-POSIT4 MAC 
 ## 7. Results:
 
