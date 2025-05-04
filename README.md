@@ -161,10 +161,10 @@ Unlike IEEE-754 floats, Posit offers:
 
 
 For more details, refer to the original article:  
-👉 [SIGARCH: Posit - A Potential Replacement for IEEE-754](https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/)
+[SIGARCH: Posit - A Potential Replacement for IEEE-754](https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/)
 
 
-## 7. Implementiing FP16-POSIT4 Multipiction and MAC operations
+## 7. Implementing FP16-POSIT4 multiplication and MAC operations
 
 
 ## 7. Results:
