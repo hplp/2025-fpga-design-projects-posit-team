@@ -315,7 +315,7 @@ The following figure shows the block design.
 
 Then we export this hardware and test it on board via the Vitis tool. This demo is represented in the following figure and demo video. 
 ![image](https://github.com/user-attachments/assets/60b72d71-219f-46fe-b511-31fec72f3e8b)
-> *Figure: Demo of the FP16-POSIT4 Mul Custom IP(Write 0x01351234 on Register 0, Read 0x020C6800 from Register.*
+> *Figure: Demo of the FP16-POSIT4 Mul Custom IP(Write 0x01351234 on Register 0, Read 0x020C6800 from Register.)*
 
 ### FP16-POSIT4 MAC 
 
