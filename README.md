@@ -165,8 +165,66 @@ For more details, refer to the original article:
 
 
 ## 7. Implementing FP16-POSIT4 multiplication and MAC operations
+### FP16-POSIT4 multiplication 
+#### Inputs
+
+- `act[15:0]`: IEEE-754 FP16 activation  
+  → 1-bit sign | 5-bit exponent | 10-bit mantissa  
+- `w[3:0]`: Posit(4,0) weight (MSB first)
+- Handshake/control:
+  - `valid`: Enable processing of the next weight bit
+  - `set`: Latch user-defined precision
+  - `precision[3:0]`: Width of posit input (1–8 bits)
+  - `clk`, `rst`: Clock and asynchronous reset
 
 
+#### Outputs
+
+- `sign_out`: Sign of the final product
+- `exp_out[4:0]`: Final exponent result
+- `mantissa_out[13:0]`: Accumulated fixed-point mantissa result
+- `zero_out`: Asserted if decoded weight = 0
+- `NaR_out`: Asserted if decoded weight = NaR
+- `done`: High for 1 cycle when multiply is complete
+
+#### Internal Architecture
+
+##### Precision & Bit Scanner
+
+- Latches user-specified precision on `set=1`
+- A cycle counter walks through each bit of the weight while `valid=1`
+
+
+##### Three-State FSM
+
+#### 1. `SIGN` (First Cycle)
+- Computes product sign: `sign_out = act_sign ⊕ w[MSB]`
+- Seeds exponent with FP16 exponent
+- Detects and flags `Zero` or `NaR`
+
+#### 2. `REGIME` (Following Cycles)
+- Counts identical regime bits to compute `k`
+- Updates exponent: `exp_out += ±k`
+- Captures FP16 mantissa for multiplication
+
+#### 3. `MANTISSA` (Remaining Cycles)
+- For each weight bit = 1:
+  - Left-shifts mantissa (`align`)
+  - May decrement exponent (to adjust hidden-one)
+- For each weight bit = 0:
+  - Mantissa contributes 0
+  - Exponent remains unchanged
+
+
+##### Mantissa Pipeline & Accumulation
+
+- Two 14-bit registers: `mantissa_reg`, `mantissa_temp`
+- A fixed-point adder adds the shifted FP16 mantissa every cycle:
+  ```verilog
+  shifted_fp + mantissa_temp → mantissa_reg
+
+---
+### FP16-POSIT4 MAC 
 ## 7. Results:
 
 ### 7.1 Implementation and Verification -  FP-Posit MAC
@@ -244,10 +302,8 @@ As it is shown above and expected, FP-Posite Mac utilizes less hardware than FP-
 
 ## 8. Key Takeaways
 
-## 9. Chalneges
-We are currently facing challenges testing our IP using Vitis with C code. Since the Posit input is sent serially with each clock cycle, we've realized that we need to create a custom IP with AXI Stream instead of AXI Lite. However, the issue is that AXI Stream has only four registers, while our code requires eight registers. We are now working on modifying the code to send the Posit input in parallel or exploring how to use AXI Stream with this code.
 
-## 10. Conclusion
+## 9. Conclusion
 
 
 ## References
