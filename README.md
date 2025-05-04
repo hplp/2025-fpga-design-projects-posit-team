@@ -458,10 +458,22 @@ Resource Utilization
 
 As it is shown above and expected, FP-Posite Mac utilizes less hardware than FP-Int.
 
+
 ## 8. Key Takeaways
 
+- **Mixed-format arithmetic** using FP16 activations and Posit(4,0) weights successfully reduces hardware complexity while maintaining reasonable numerical precision.
+- **Posit representation** provides higher dynamic precision than Int4 and is more efficient at representing real-world values near 1.0, making it suitable for AI inference.
+- The custom Multiply module is fully pipelined, tested on PYNQ-Z1, and integrated with AXI-Lite, demonstrating complete functionality.
+- Compared to FP16-Int4 baseline:
+  - **FP16-Posit4 MAC** achieved ~30% lower LUT usage.
+  - Simulation results confirmed accurate scaled computation and accumulation.
 
 ## 9. Conclusion
 
+In this project, we developed a custom IP core that combines FP16 activations with 4-bit Posit weights to perform real-number multiplication. By leveraging the tapered precision and compact encoding of the Posit format, we achieved reduced resource utilization on the FPGA compared to a traditional FP16-Int4 MAC baseline. Our implementation—synthesized, integrated with AXI-Lite, and verified on hardware—demonstrates that Posit arithmetic is advantageous for hardware-efficient neural computations. This work highlights the potential of hybrid-precision designs for low-power AI accelerators.
 
 ## References
+- Gustafson, J. (2017). Posit: A potential replacement for IEEE-754. Retrieved from https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/
+- Gao, Y. (2023). FP-INT-MAC: A Baseline Integer MAC Core with FP16 Activations. GitHub repository: https://github.com/YiminGao0113/FP-INT-MAC
+![image](https://github.com/user-attachments/assets/d2181c4f-52b1-4d9e-b4eb-a43dd076b648)
+
