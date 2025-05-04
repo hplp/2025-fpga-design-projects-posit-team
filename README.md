@@ -256,7 +256,6 @@ The following figure shows the block design.
 
 Then we export this hardware and test it on board via the Vitis tool. This demo is represented in the following figure and demo video. 
 
-![image](https://github.com/user-attachments/assets/87feb3ec-3bcb-44e8-90f1-8c952768b270)
 
 ### FP16-POSIT4 MAC 
 ## 7. Results:
