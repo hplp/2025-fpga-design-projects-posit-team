@@ -293,9 +293,9 @@ The MAC unit connects two modules in sequence:
   
 
 
-## 7. Results:
+## 8. Results:
 
-### 7.1 Implementation and Verification -  FP-Posit MAC
+### 8.1 Implementation and Verification -  FP-Posit MAC
 - FP-Posit Multiplication Testbench Result:
   <p align="center">
   <img src="Images/posit_mul.png" alt="fp_posit_mul" width="80%">
@@ -332,8 +332,21 @@ Simulation Output
     <p align="center">
   <img src="Images/posit_mac.png" alt="fp_posit_mac" width="80%">
 </p>
+MAC Operation Example
 
-### 7.2 Implementation and Verification - FP-Int MAC
+- **Accumulator Input (`acc`)**: `0x0000001e`  
+  → Decimal = **0.029296875**  
+  → Scaled value:  0.029296875 × 2^{-12} = 0.0000071526
+- **Previous Multiply Output:**
+0.0011358261 + 0.0000071526 = 0.0011429787
+
+Simulation Output
+- **Output (`fixed_point_out`)**: `0x000012ba`  
+→ Decimal = **4.681640625**  
+→ Scaled value: 4.681640625 × 2⁻¹² = 0.0011429787
+
+
+### 8.2 Implementation and Verification - FP-Int MAC
 - FP-Int Multiplication Module as baseline Testbench Result:
 
 <p align="center">
