@@ -255,9 +255,44 @@ The following figure shows the block design.
 > *Figure: Block design diagram.*
 
 Then we export this hardware and test it on board via the Vitis tool. This demo is represented in the following figure and demo video. 
-
+![image](https://github.com/user-attachments/assets/60b72d71-219f-46fe-b511-31fec72f3e8b)
+> *Figure: Demo of the FP16-POSIT4 Mul Custom IP(Write 0x01351234 on Register 0, Read 0x020C6800 from Register.*
 
 ### FP16-POSIT4 MAC 
+
+This module performs a **Multiply-Accumulate (MAC)** operation where:
+- The activation input is in **FP16 format**
+- The weight is in **Posit(4,0)** format
+
+#### Internal Architecture
+
+The MAC unit connects two modules in sequence:
+
+1. **Multiplier**  
+   - Multiplies `act × w`
+   - Produces:
+     - `mantissa_out`: 14-bit fixed-point product
+     - `exp_out`: unbiased exponent
+     - `sign_out`, `zero`, `NaR`
+   - Triggers `done` as `start_acc` for the accumulator
+
+2. **Accumulator**  
+   - Aligns and adds/subtracts mantissa fragments into a 32-bit accumulator
+   - Adjusts mantissa based on exponent difference (`exp_in - exp_set`)
+   - Applies sign correction
+   - Outputs:
+     - Final `fixed_point_out` and `exp_out`
+     - Asserts `done` and `NaR_out` accordingly
+
+##### Key Features
+
+- Fully pipelined and clock-synchronous
+- Handles Zero and NaR detection
+- Parameterizable width for accumulator and activation input
+- Aligns mantissa dynamically using exponent delta
+  
+
+
 ## 7. Results:
 
 ### 7.1 Implementation and Verification -  FP-Posit MAC
