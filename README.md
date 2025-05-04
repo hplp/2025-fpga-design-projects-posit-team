@@ -246,9 +246,68 @@ For more details, refer to the original article:
 
 ---
 ### Creating the Custom IP and testing on board
-We created a new IP for the FP16-POSIT4 multiplication module using the AXI4 peripheral Lite version. The modification of the code inside the AXI IP block is shown in the figures below.
-> *Figure: instantiates the FP16-POSIT4 multiplication module inside the AXI Lite IP block
-> *Figure: set the output
+We created a new IP for the FP16-POSIT4 multiplication module using the AXI4 peripheral Lite version. The modification of the code inside the AXI IP block is shown below:
+### AXI-Lite Integration:
+- instantiates the FP16-POSIT4 multiplication module inside the AXI Lite IP block:
+```verilog
+// ---------------- User-logic signals (STEP-1) ---------------- 
+wire [13:0] mine_mantissa;
+wire        mine_sign;
+wire [4:0]  mine_exp;
+wire        mine_done;
+wire        mine_zero;
+wire        mine_nar;
+
+wire [31:0] mine_out_bus;  // Packed 32-bit read-back word
+// -------------------------------------------------------------
+
+// ===================== mine core instance (STEP-2) =====================
+mine #(
+    .ACT_WIDTH (16),
+    .EXP_WIDTH (5),
+    .MAN_WIDTH (10)
+) u_mine (
+    .clk          (S_AXI_ACLK),
+    .rst          (S_AXI_ARESETN),        // mine uses active-high reset
+    // ---------- inputs driven from slave register-0 ----------
+    .act          (slv_reg0[15:0]),       // 16-bit activation input
+    .w            (slv_reg0[19:16]),      // 4-bit Posit weight
+    .valid        (slv_reg0[20]),         // 1-bit valid signal
+    .set          (slv_reg0[21]),         // 1-bit precision set signal
+    .precision    (slv_reg0[25:22]),      // 4-bit precision selector
+    // ---------- outputs --------------------------------------
+    .sign_out     (mine_sign),
+    .exp_out      (mine_exp),
+    .mantissa_out (mine_mantissa),
+    .done         (mine_done),
+    .zero_out     (mine_zero),
+    .NaR_out      (mine_nar)
+);
+
+// ========== Output Packing (STEP-3) ==========
+assign mine_out_bus = {
+    mine_sign,         // [31]
+    mine_done,         // [30]
+    mine_zero,         // [29]
+    mine_nar,          // [28]
+    mine_exp,          // [27:23]
+    mine_mantissa,     // [22:9]
+    9'b0               // [8:0] - Unused
+};
+// =======================================================================
+```
+- Set the output inside the AXI Lite IP block:
+```verilog
+// AXI readback register address mapping
+case (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
+    2'h0   : reg_data_out <= slv_reg0;
+    2'h1   : reg_data_out <= mine_out_bus;  // Output result
+    2'h2   : reg_data_out <= slv_reg2;
+    2'h3   : reg_data_out <= slv_reg3;
+    default: reg_data_out <= 32'b0;
+endcase
+```
+
 
 The following figure shows the block design.
 > ![image](https://github.com/user-attachments/assets/96e9b9bb-d956-4eb8-88b5-5fbc1c016d49)
