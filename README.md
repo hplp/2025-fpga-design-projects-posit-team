@@ -220,8 +220,29 @@ For more details, refer to the original article:
 
 - Two 14-bit registers: `mantissa_reg`, `mantissa_temp`
 - A fixed-point adder adds the shifted FP16 mantissa every cycle:
-  ```verilog
-  shifted_fp + mantissa_temp → mantissa_reg
+
+##### Final Output and Completion
+
+- The final result is presented on `mantissa_out` during the same cycle that `done` is asserted.
+- This indicates the completion of the multiply operation.
+
+---
+
+##### Special Value Handling
+
+- `zero_out` or `NaR_out` is asserted in the same cycle as `done` if:
+  - Weight = `0000` → interpreted as **Zero**
+  - Weight = `1000` → interpreted as **NaR (Not a Real)**
+- All flags and internal state are cleared on `rst = 0`.
+
+---
+
+##### Timing Summary
+
+- **Latency**: Equal to the selected `precision` in cycles  
+  → e.g., **4 cycles** for `Posit(4,0)`
+- Fully synchronous to `clk`
+- Single-issue pipeline: can be re-triggered as soon as `done` de-asserts
 
 ---
 ### FP16-POSIT4 MAC 
