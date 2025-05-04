@@ -427,7 +427,7 @@ Simulation Output
 
 
   
-## 8. Custom IP Creation with Zynq for both FP-Posit MAC and FP-Int MAC 
+## 8. Comparing FP-Posit MAC and FP-Int MAC 
 
 ### 8.1 FP-Posit MAC
 Netlist Diagram
