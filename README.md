@@ -475,5 +475,5 @@ In this project, we developed a custom IP core that combines FP16 activations wi
 ## References
 - Gustafson, J. (2017). Posit: A potential replacement for IEEE-754. Retrieved from https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/
 - Gao, Y. (2023). FP-INT-MAC: A Baseline Integer MAC Core with FP16 Activations. GitHub repository: https://github.com/YiminGao0113/FP-INT-MAC
-![image](https://github.com/user-attachments/assets/d2181c4f-52b1-4d9e-b4eb-a43dd076b648)
+
 
