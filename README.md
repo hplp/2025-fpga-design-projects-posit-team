@@ -51,7 +51,7 @@ computational tasks common in machine learning and high-performance computing.
 2.	Improved hardware resource over traditional FP16-Int4 MAC units, due to the use of compact 4-bit Posit weights.
 3.	Verified simulation and hardware testing results showing correctness, resource utilization, and accuracy trade-offs—potentially suitable for edge AI applications.
 
-## 5. Methos:
+## 5. Methods:
 
 - Implement FP-Posit Multiplication Module 
 - Integrate the multiplier and accumulator modules
