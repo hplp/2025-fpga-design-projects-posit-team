@@ -105,10 +105,11 @@ Overall, an n-bit posit number (p) can represent the following numbers.
 
 ### Example
 
-With `es = 3`, the following posit (n=16 bits):
+With `es = 3`, the following posit (n=16 bits) represents ` 477/134217728 ≈ 3.55393 × 10^-6 `.
+
 ![image](https://github.com/user-attachments/assets/52e275ef-aa8a-405d-9ec6-d4c100c1d5a0)
 
-represents ` 477/134217728 ≈ 3.55393 × 10^-6 ` with es=3.
+
 
 
 ---
